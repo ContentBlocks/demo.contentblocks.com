@@ -4,8 +4,21 @@
 
         <content-block section="sitewide-message" :attributes="message">
             <template v-slot:content="slotProps" >
-                <div v-if="slotProps.content.message && slotProps.content.show" class="text-center p-3 " v-html="slotProps.content.message" :style="{backgroundColor: slotProps.content.bgColor, color: slotProps.content.color}">
-                    Welcome to the ContentBlocks demo. To edit this page, press [ctrl] + e or hold down your mouse for 5 seconds.
+                <div v-if="slotProps.content.message && slotProps.content.show" class="text-center p-3 " :style="{backgroundColor: slotProps.content.bgColor, color: slotProps.content.color}">
+                    <div class="d-flex justify-content-center">
+
+                        <div v-html="slotProps.content.message" class="mr-4"></div>
+
+                        <div>
+                            <a :href="slotProps.content.link.url" :target="slotProps.content.link.target">
+                                <svg  class="svg-icon social-icon" :fill="slotProps.content.icon.color" viewBox="0 0 512 512">
+                                    <path :d="slotProps.content.icon.svg"></path>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+
                 </div>
             </template>
         </content-block>
@@ -66,7 +79,7 @@
                 <content-block section="services"  :attributes="services">
                     <template v-slot:content="slotProps" >
                         <div class="row justify-content-center" data-aos="fade-up">
-                            <div class="col-lg-6 text-center heading-section mb-5">
+                            <div class="col-lg-6 text-center heading-section mb-5 ">
                                 <div class="paws">
                                     <span class="icon-paw"></span>
                                 </div>
@@ -77,8 +90,8 @@
 
 
                         <div class="row" v-if="slotProps.content.serviceItems" >
-                            <div v-for="(service, serviceIdx) in slotProps.content.serviceItems" :key="serviceIdx" class="col-md-6 mb-4 col-lg-4" data-aos="fade-up" data-aos-delay="">
-                                <div class="block_service">
+                            <div v-for="(service, serviceIdx) in slotProps.content.serviceItems" :key="serviceIdx" class="col-md-6 mb-4 col-lg-4 " data-aos="fade-up" data-aos-delay="">
+                                <div class="block_service text-center ">
                                     <img :src="service.image.url" alt="Image mb-5">
                                     <h3>{{service.title}}</h3>
                                     <p>{{service.description}} </p>
@@ -149,6 +162,16 @@
                         type: 'wysiwyg',
                         label: 'Sitewide Message',
                         hint: 'Applies to both mobile and desktop.'
+                    },
+                    {
+                        _key: 'icon',
+                        label: 'Icon',
+                        type: 'icon'
+                    },
+                    {
+                        _key: 'link',
+                        label: "Link",
+                        type: 'link',
                     },
                     {
                         _key: 'bgColor',
