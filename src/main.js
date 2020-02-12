@@ -74,7 +74,7 @@ router.beforeEach((to, from, next) => {
 Vue.config.productionTip = false
 
 import ContentBlocks from 'contentblocks-vuejs'
-Vue.use(ContentBlocks, {project_id: 'kj0MCiAolLHGnx9PPbsO', key:'e' })
+Vue.use(ContentBlocks, {project_id: 'kj0MCiAolLHGnx9PPbsO' })
 
 new Vue({
   render: h => h(App),
