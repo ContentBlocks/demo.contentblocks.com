@@ -84,6 +84,12 @@ body {
     width: 250px;
     .menu-wrapper {
       display: block;
+      a {
+        color: blue;
+      }
+      a.router-link-exact-active {
+        font-weight: bold;
+      }
     }
   }
 }
