@@ -1,9 +1,9 @@
 <template>
     <div>
         <div class="demo-wrapper">
-            <cb-structured section="demo-fields-button" :schema="schema">
+            <cb-structured section="demo-fields-color" :schema="schema">
                 <template v-slot:content="props" >
-                    <button :class="props.content.myButton.style" @click="clicked">{{props.content.myButton.label}}</button>
+                    <div  class="color-box" :style="{backgroundColor: props.content.myColor.hex}"></div>
                     <raw-output :content="props"></raw-output>
                 </template>
             </cb-structured>
@@ -19,9 +19,9 @@
                 schema: {
                     fields: [
                         {
-                            id: 'myButton',
-                            type: 'button',
-                            label: 'Example Button'
+                            id: 'myColor',
+                            type: 'color',
+                            label: 'Example Color Output'
                         }
                     ]
                 }
@@ -34,3 +34,9 @@
         }
     }
 </script>
+<style scoped>
+    .color-box {
+        height: 50px;
+        width: 50px;
+    }
+</style>

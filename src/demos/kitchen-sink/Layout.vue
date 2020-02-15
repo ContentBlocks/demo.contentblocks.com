@@ -1,7 +1,7 @@
 <template>
     <div :class="css">
         <div ref="main" class="main">
-            <div class="header">
+            <div class="header mb-4">
                 <div @click="toggle" class="menu-toggle">
                     <div  v-show="navOpen == false">
                         <i class="fas fa-bars"></i>
@@ -13,8 +13,8 @@
                 ><h3>ContentBlocks Demo</h3>
             </div>
 
+            <h1 class="mb-1">{{title}}</h1>
             <p>Press [ctrl]+m or tap+hold for 5 seconds to activate editor</p>
-            <h1>{{title}}</h1>
             <router-view></router-view>
             <div class="footer">ContentBlocks Demo - <a href="https://www.contentblocks.io/">Learn more</a> or <a href="https://github.com/ContentBlocks/demo.contentblocks.com" target="_blank">Get the source on GitHub</a></div>
 
