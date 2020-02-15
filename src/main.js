@@ -23,9 +23,12 @@ var vueMeta = {
   ]
 }
 
+import kitchenSinkRoutes from './demos/kitchen-sink/routes'
+
 const routes = [
   { path: '/dogger', component: Dogger, meta: vueMeta },
   { path: '/vuejs', component: Dogger, meta: vueMeta },
+  kitchenSinkRoutes
 ]
 
 const router = new VueRouter({

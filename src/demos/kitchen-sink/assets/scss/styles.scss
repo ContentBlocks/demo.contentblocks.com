@@ -1,0 +1,96 @@
+body {
+  padding: 10px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 50px;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #eee; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.1s; /* 0.5 second transition effect to slide in the sidenav */
+
+  .menu-wrapper {
+    padding: 20px;
+    display: none;
+    ul {
+      margin-left: 0px;
+      padding-left: 0px;
+      list-style: none;
+      li:first-child {
+        margin-left: 0px;
+      }
+      li {
+        margin-left: 10px;
+        padding-left: 0px;
+      }
+    }
+  }
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.header {
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  .menu-toggle {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  h3 {
+    margin-bottom: 0px;
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+.nav-open {
+  .main {
+    margin-left: 250px;
+
+  }
+  .sidenav {
+    width: 250px;
+    .menu-wrapper {
+      display: block;
+    }
+  }
+}
+
+
+.demo-wrapper {
+  padding: 10px;
+  border: dotted;
+  color: #eee;
+}
