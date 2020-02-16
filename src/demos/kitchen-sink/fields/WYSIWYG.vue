@@ -2,7 +2,7 @@
      <div class="demo-wrapper">
          <cb-structured section="demo-fields-wysiwyg" :schema="schema">
              <template v-slot:content="props">
-                 <p style="color:#333">{{props.content.note.html}}</p>
+                 <p v-html="props.content.note.html"></p>
                  <raw-output :content="props"></raw-output>
              </template>
          </cb-structured>

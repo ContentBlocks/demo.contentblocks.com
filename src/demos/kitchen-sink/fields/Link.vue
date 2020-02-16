@@ -2,7 +2,7 @@
     <div class="demo-wrapper">
         <cb-structured section="demo-field-link" :schema='schema'>
             <template v-slot:content="props" >
-                <a :href="props.content.website.url" :target="props.content.website.target">{{props.content.website.label}}</a>
+                <a :href="props.content.websiteLink.url" :target="props.content.websiteLink.target">{{props.content.websiteLink.text}}</a>
                 <raw-output :content="props" ></raw-output>
             </template>
         </cb-structured>
@@ -18,8 +18,8 @@ export default {
                 fields: [
                     {
                         type: 'link',
-                        id: 'website',
-                        label: 'company website',
+                        id: 'websiteLink',
+                        label: 'Company Website',
                         required: true
                     }
                 ]

@@ -20,7 +20,7 @@ export default {
                         type: 'text-area',
                         id: 'note',
                         label: 'enter your note',
-                        hint: 'note',
+                        hint: 'Try to keep it to a few lines of text if you can.',
                         placeholder: 'Please enter a short note'
                     }
                 ]

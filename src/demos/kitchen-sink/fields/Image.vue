@@ -2,7 +2,7 @@
     <div class="demo-wrapper">
         <cb-structured section="demo-field-image" :schema='schema'>
             <template v-slot:content="props" >
-                <img style="width:120px; border-radius: 50%" :src="props.content.avatar.url"/>
+                <img  :src="props.content.myImage.url"/>
                 <raw-output :content="props" ></raw-output>
             </template>
         </cb-structured>
@@ -18,8 +18,8 @@ export default {
                 fields: [
                     {
                         type: 'image',
-                        id: 'avatar',
-                        label: 'user avarter',
+                        id: 'myImage',
+                        label: 'Profile Picture',
                         required: true
                     }
                 ]
@@ -28,3 +28,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    .demo-wrapper img {
+        max-height: 150px;
+    }
+</style>

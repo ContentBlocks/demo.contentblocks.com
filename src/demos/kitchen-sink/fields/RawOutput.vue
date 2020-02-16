@@ -19,7 +19,7 @@
         margin-top: 20px;
         pre {
             display: block;
-            color: rgb(236, 236, 236);
+            color: #eee;
         }
     }
 </style>

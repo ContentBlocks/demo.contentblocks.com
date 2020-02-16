@@ -2,10 +2,7 @@
      <div class="demo-wrapper">
          <cb-structured section="demo-fields-switch" :schema="schema">
              <template v-slot:content="props">
-                    <label class="switch">
-                        <input type="checkbox" :checked="props.content.isChecked.state" />
-                        <span class="slider round"></span>
-                    </label>
+                 <span v-if="props.content.isChecked.state">I am visible, edit to turn me on and off.</span>
                  <raw-output :content="props"></raw-output>
              </template>
          </cb-structured>
