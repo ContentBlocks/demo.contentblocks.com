@@ -7,15 +7,19 @@
 </template>
 <script>
     export default {
+        name: 'raw-output',
         props: ['content']
     }
 </script>
 <style lang="scss">
     .raw-output {
-        color: #000;
+        color: rgb(49, 153, 89);
+        padding: 10px;
+        background-color: rgb(31, 29, 29);
         margin-top: 20px;
         pre {
             display: block;
+            color: rgb(236, 236, 236);
         }
     }
 </style>
