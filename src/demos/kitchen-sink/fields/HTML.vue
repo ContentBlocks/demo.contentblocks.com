@@ -3,7 +3,7 @@
         <div class="demo-wrapper">
             <cb-structured section="demo-fields-html" :schema="schema">
                 <template v-slot:content='props'>
-                    <h1 style="color:#333" :class="props.content.head.style">{{props.content.head}}</h1>
+                    <div  v-html="props.content.myHtml.html"></div>
                     <raw-output :content="props"></raw-output>
                 </template>
             </cb-structured>
@@ -21,8 +21,8 @@ export default {
                 fields: [
                     {
                         type: 'html',
-                        id: 'head',
-                        label: 'custom header 1 tag'
+                        id: 'myHtml',
+                        label: 'Enter raw HTML'
                     },
                 ]
             }
