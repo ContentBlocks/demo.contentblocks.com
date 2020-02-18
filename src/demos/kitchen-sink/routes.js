@@ -17,6 +17,7 @@ export default {
             component: Home,
             meta: {
                 title: 'Kitchen Sink',
+                hideEditorMessage: true
             }
         },
         {

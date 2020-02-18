@@ -14,7 +14,7 @@
             </div>
 
             <h1 class="mb-1">{{title}}</h1>
-            <p>Press [ctrl]+m or tap+hold for 5 seconds to activate editor</p>
+            <p v-if="!$route.meta.hideEditorMessage">Press [ctrl]+m or tap+hold for 5 seconds to activate editor</p>
             <router-view></router-view>
             <div class="footer">ContentBlocks Demo - <a href="https://www.contentblocks.io/">Learn more</a> or <a href="https://github.com/ContentBlocks/demo.contentblocks.com" target="_blank">Get the source on GitHub</a></div>
 
@@ -51,7 +51,7 @@
         data () {
             return {
                 routes: routes.children,
-                navOpen: false
+                navOpen: true
             }
         },
         computed: {

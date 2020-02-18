@@ -1,5 +1,5 @@
 <template>
-    <div>Home</div>
+    <div>Welcome to the ContentBlocks demo.</div>
 </template>
 <script>
     import mixin from './mixin'
